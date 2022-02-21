@@ -1,0 +1,13 @@
+List<int> clctn = new();
+for (int i = 1; i < 1001; i++)
+{
+	Random rnd = new();
+	int rand = rnd.Next(0, 1000);
+	if (rand % 15 == 0 && rand != 0)
+	{
+		clctn.Add((int)Math.Pow(rand, 2));
+		
+	}
+}
+clctn.Sort();
+Console.WriteLine((String.Join(", ", clctn)).Reverse());
